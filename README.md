@@ -1,6 +1,6 @@
 # AI RPG
 
-This program is an AI powered RPG that you can play in the browser. It is available online at https://ethan-hawksley.github.io/
+This program is an AI powered RPG that you can play in the browser. It is available online at https://ai-rpg.pages.dev/
 
 ## Developing
 
