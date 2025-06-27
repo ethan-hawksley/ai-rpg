@@ -1,5 +1,6 @@
 <script lang="ts">
     import {onMount} from "svelte";
+    import {goto} from "$app/navigation";
     import medieval from "$lib/assets/medieval.png";
     import zombie from "$lib/assets/zombie.png";
     import futuristic from "$lib/assets/futuristic.png"
@@ -10,16 +11,24 @@
     onMount(() => {
         const startForm = document.getElementById("start-form") as HTMLFormElement | null
         if (startForm) {
-            startForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                const formData = new FormData(startForm)
-                console.log(formData)
-                if (formData.has("scenario") && formData.has("storyteller")) {
-                    console.log(formData.get("scenario"), formData.get("storyteller"))
-                }
-            })
+            startForm.addEventListener("submit", handleFormSubmission)
         }
     })
+
+    function handleFormSubmission(event: SubmitEvent): void {
+        event.preventDefault();
+        const form = event.currentTarget as HTMLFormElement;
+        const formData = new FormData(form);
+
+        if (formData.has("scenario") && formData.has("storyteller")) {
+            const scenario = formData.get("scenario");
+            const storyteller = formData.get("storyteller");
+            console.log(scenario, storyteller);
+
+            const settings = JSON.stringify({scenario, storyteller});
+            goto(`/play?settings=${encodeURIComponent(settings)}`);
+        }
+    }
 </script>
 
 <h1>Start game</h1>
