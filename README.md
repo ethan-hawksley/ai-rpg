@@ -7,7 +7,7 @@ We need to figure out the svelte documentation.
 Storyteller Selection
 Setting Selection
 Text output and input prompts
-Using hackclub ai completion
+Using hackclub AI completion
 Leaderboards at the end
 Tutorial time
 https://svelte.dev/tutorial/kit/introducing-sveltekit

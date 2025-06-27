@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { data, children } = $props();
+    let {data, children} = $props();
 </script>
 
 <div class="layout">
@@ -10,11 +10,11 @@
     <aside>
         <h2>More posts</h2>
         <ul>
-            {#each data.summaries as { slug, title }}
+            {#each data.summaries as {slug, title}}
                 <li>
                     <a href="/blog/{slug}">{title}</a>
                 </li>
-                {/each}
+            {/each}
         </ul>
     </aside>
 </div>
