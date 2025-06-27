@@ -1,0 +1,18 @@
+:root {
+    --background-color: #666;
+    --text-color: #eee;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+textarea {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}

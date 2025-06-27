@@ -56,18 +56,17 @@
         }
     }
 
-    function addToStory(text) {
+    function addToStory(text: string) {
         if (story.length >= 10) story.shift();
         story.push(text);
         story = story;
     }
 
+
 </script>
 
 <h2>AI-RPG</h2>
 <p>Game ready!</p>
-<p>{data.settings.scenario}</p>
-<p>{data.settings.storyteller}</p>
 
 <ul>
     {#each story as section, index (index)}

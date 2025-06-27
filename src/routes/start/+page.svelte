@@ -28,7 +28,6 @@
             const settings = JSON.stringify({scenario, storyteller});
             goto(`/play?settings=${encodeURIComponent(settings)}`);
         }
-        // svelte dynamically add page objects.
     }
 </script>
 
@@ -90,6 +89,6 @@
     }
 
     .radio > input:checked + img {
-        outline: 2px solid black;
+        outline: 2px solid var(--text-color);
     }
 </style>
