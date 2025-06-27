@@ -1,4 +1,4 @@
-export const prompt = "You are an AI storyteller.";
+export const prompt = "You are an AI storyteller. Keep your responses to a medium length. Typically between 200 and 500 words, unless there is a reason otherwise.";
 
 export const storytellers = {
   serious: "Act serious.",

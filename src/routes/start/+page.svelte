@@ -31,48 +31,50 @@
     }
 </script>
 
-<h1>Start game</h1>
-<form id="start-form">
-    <div>
-        <h2>Pick your starting scenario.</h2>
-        <label class="radio">
-            <input id="medieval" name="scenario" type="radio" value="medieval"/>
-            <img alt="Medieval" src={medieval}>
-        </label>
+<div class="container">
+    <h1>Start game</h1>
+    <form id="start-form">
+        <div>
+            <h2>Pick your starting scenario.</h2>
+            <label class="radio">
+                <input id="medieval" name="scenario" type="radio" value="medieval"/>
+                <img alt="Medieval" src={medieval}>
+            </label>
 
-        <label class="radio">
-            <input id="zombie" name="scenario" type="radio" value="zombie"/>
-            <img alt="Zombie" src={zombie}>
-        </label>
+            <label class="radio">
+                <input id="zombie" name="scenario" type="radio" value="zombie"/>
+                <img alt="Zombie" src={zombie}>
+            </label>
 
-        <label class="radio">
-            <input id="futuristic" name="scenario" type="radio" value="futuristic"/>
-            <img alt="Futuristic" src={futuristic}>
-        </label>
-    </div>
+            <label class="radio">
+                <input id="futuristic" name="scenario" type="radio" value="futuristic"/>
+                <img alt="Futuristic" src={futuristic}>
+            </label>
+        </div>
 
-    <div>
-        <h2>Pick your AI storyteller.</h2>
+        <div>
+            <h2>Pick your AI storyteller.</h2>
 
-        <label class="radio">
-            <input id="serious" name="storyteller" type="radio" value="serious"/>
-            <img alt="Serious" src={serious}>
-        </label>
+            <label class="radio">
+                <input id="serious" name="storyteller" type="radio" value="serious"/>
+                <img alt="Serious" src={serious}>
+            </label>
 
-        <label class="radio">
-            <input id="creative" name="storyteller" type="radio" value="creative"/>
-            <img alt="Creative" src={creative}>
-        </label>
+            <label class="radio">
+                <input id="creative" name="storyteller" type="radio" value="creative"/>
+                <img alt="Creative" src={creative}>
+            </label>
 
-        <label class="radio">
-            <input id="unforgiving" name="storyteller" type="radio" value="unforgiving"/>
-            <img alt="Unforgiving" src={unforgiving}>
-        </label>
-    </div>
+            <label class="radio">
+                <input id="unforgiving" name="storyteller" type="radio" value="unforgiving"/>
+                <img alt="Unforgiving" src={unforgiving}>
+            </label>
+        </div>
 
-    <button type="submit">Start Game</button>
+        <button type="submit">Start Game</button>
 
-</form>
+    </form>
+</div>
 
 <style>
     .radio > input {

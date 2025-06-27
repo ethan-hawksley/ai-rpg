@@ -1,18 +1,80 @@
 :root {
-    --background-color: #666;
-    --text-color: #eee;
+    --background-color: #23272f;
+    --secondary-background-color: #353b48;
+    --accent-color: #4f8cff;
+    --text-color: #f5f6fa;
+    --hover-color: #82aaff;
+    --border-radius: 8px;
+    --input-padding: 0.75em 1em;
+    --transition: 0.2s;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
 a {
-    color: var(--text-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition);
 }
 
-textarea {
-    background-color: var(--background-color);
+a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+textarea, input, select {
+    background-color: var(--secondary-background-color);
     color: var(--text-color);
+    border: 1px solid #444c56;
+    border-radius: var(--border-radius);
+    padding: var(--input-padding);
+    font-size: 1em;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    margin-bottom: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea:focus, input:focus, select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px #4f8cff33;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition), box-shadow var(--transition);
+    margin-top: 0.5em;
+}
+
+button:hover, button:focus {
+    background-color: #3574e6;
+    box-shadow: 0 2px 8px #4f8cff33;
+}
+
+.container {
+    max-width: 700px;
+    margin: 2em auto;
+    background: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 24px #0002;
+    padding: 2em;
+}
+
+h1, h2, h3 {
+    color: var(--accent-color);
+    margin-top: 0;
 }
