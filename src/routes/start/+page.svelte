@@ -1,6 +1,7 @@
 <script lang="ts">
     import {onMount} from "svelte";
     import {goto} from "$app/navigation";
+    import {base} from "\$app/paths";
     import medieval from "$lib/assets/medieval.png";
     import zombie from "$lib/assets/zombie.png";
     import futuristic from "$lib/assets/futuristic.png"
@@ -26,7 +27,7 @@
             console.log(scenario, storyteller);
 
             const settings = JSON.stringify({scenario, storyteller});
-            goto(`/play?settings=${encodeURIComponent(settings)}`);
+            goto(`${base}/play?settings=${encodeURIComponent(settings)}`);
         }
     }
 </script>

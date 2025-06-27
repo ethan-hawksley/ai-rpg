@@ -1,16 +1,6 @@
 # AI RPG
 
-Planning phase
-
-We need to figure out the svelte documentation.
-
-Storyteller Selection
-Setting Selection
-Text output and input prompts
-Using hackclub AI completion
-Leaderboards at the end
-Tutorial time
-https://svelte.dev/tutorial/kit/introducing-sveltekit
+This program is an AI powered RPG that you can play in the browser. It is available online at
 
 ## Developing
 
@@ -19,9 +9,6 @@ development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
 ## Building
@@ -33,6 +20,3 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target
-> environment.
