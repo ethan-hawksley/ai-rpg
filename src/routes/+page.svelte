@@ -2,5 +2,6 @@
 <p>In this RPG, you play by the rules of an AI storyteller.</p>
 
 <p>Different AI storytellers have different attitudes. Some are more lenient, and others are much stricter.</p>
-<p>You'll also have the choice of scenario. Through this, you can experience many different places. They could be
-    medieval, futuristic, the list goes on!</p>
+<p>You'll also have the choice of scenario. Through this, you can experience many different places.</p>
+<p>Additionally, some storytellers may be happy for you to change the story at the very beginning to something else if
+    you would rather. Don't be afraid to get creative, the sky is the limit!</p>

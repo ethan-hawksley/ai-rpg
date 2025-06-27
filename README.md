@@ -1,22 +1,21 @@
 # AI RPG
 
 This program is an AI powered RPG that you can play in the browser. It is available online at https://ai-rpg.pages.dev/
+You can pick any combination of scenario and storyteller.
+Then, issue instructions to the AI storyteller and see how it reacts to your actions.
 
-## Developing
+## Installation
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a
-development server:
+Download the app and install dependencies with `npm install`.
+
+Then, either start a development server with
 
 ```bash
 npm run dev
 ```
 
-## Building
-
-To create a production version of your app:
+or create a production version of the app with
 
 ```bash
 npm run build
 ```
-
-You can preview the production build with `npm run preview`.

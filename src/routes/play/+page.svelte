@@ -76,10 +76,3 @@
     <textarea cols="33" id="response" name="response" rows="5"></textarea>
     <button id="continue">Continue</button>
 </div>
-
-<style>
-    li {
-        display: inline-block;
-        margin: 5px;
-    }
-</style>
