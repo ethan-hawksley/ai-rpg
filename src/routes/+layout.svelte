@@ -2,6 +2,8 @@
     import {base} from "\$app/paths";
 
     let {children} = $props();
+
+    export const prerender = true;
 </script>
 
 <nav>
