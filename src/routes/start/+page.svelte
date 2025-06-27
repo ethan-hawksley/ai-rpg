@@ -28,6 +28,7 @@
             const settings = JSON.stringify({scenario, storyteller});
             goto(`/play?settings=${encodeURIComponent(settings)}`);
         }
+        // svelte dynamically add page objects.
     }
 </script>
 
@@ -66,7 +67,7 @@
 
         <label class="radio">
             <input id="unforgiving" name="storyteller" type="radio" value="unforgiving"/>
-            <img alt="unforgiving" src={unforgiving}>
+            <img alt="Unforgiving" src={unforgiving}>
         </label>
     </div>
 
