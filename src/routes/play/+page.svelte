@@ -13,12 +13,12 @@
     };
 
     const masterPrompt = prompt + storytellers[data.settings.storyteller]
-    export let story = data.settings.scenario;
+    export let story = [scenarios[data.settings.scenario]];
 
     onMount(() => {
-        const continueButton = document.getElementById("continue") as HTMLButtonElement | null;
+        const continueButton = document.getElementById('continue') as HTMLButtonElement | null;
         if (continueButton) {
-            continueButton.addEventListener("click", handleClickEvent);
+            continueButton.addEventListener('click', handleClickEvent);
         }
     })
 
@@ -28,37 +28,38 @@
         const response = responseTextArea.value;
         if (!response) return;
 
-        // Clear the text area
-        story += `\n${response}`
-        responseTextArea.value = ""
-        console.log(response);
+        addToStory(response)
+        responseTextArea.value = '';
         const message = await getAIMessage();
-        story += `\n${message}`
+        addToStory(message)
     }
 
     async function getAIMessage() {
-        //ai.hackclub.com usage time
-        const url = "https://ai.hackclub.com/chat/completions"
-        const message = `${masterPrompt} ${story.slice(-1000)}`
+        const url = 'https://ai.hackclub.com/chat/completions';
+        const message = masterPrompt + story.slice(-10).join('\n');
         try {
             const response = await fetch(url, {
-                method: "POST",
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json"
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     messages: [{role: "user", content: message}]
                 })
-            })
+            });
 
             const data = await response.json();
             console.log(data);
             return data.choices[0].message.content;
-            // time to look up how to use ol and li with sveltekit
-            // still looking up sadly
         } catch (e) {
             console.error(e);
         }
+    }
+
+    function addToStory(text) {
+        if (story.length >= 10) story.shift();
+        story.push(text);
+        story = story;
     }
 
 </script>
@@ -67,9 +68,13 @@
 <p>Game ready!</p>
 <p>{data.settings.scenario}</p>
 <p>{data.settings.storyteller}</p>
-<p>Built with hackclub AI api. We need to use the correct API for it.</p>
 
-<p id="story">{story}</p>
+<ul>
+    {#each story as section, index (index)}
+        <li>{section}</li>
+    {/each}
+</ul>
+
 <label for="response">Your response:</label>
 <textarea cols="33" id="response" name="response" rows="5"></textarea>
 <button id="continue">Continue</button>
