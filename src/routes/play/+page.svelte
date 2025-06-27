@@ -61,19 +61,25 @@
         story = story;
     }
 
-
 </script>
 <div class="container">
     <h2>AI-RPG</h2>
     <p>Game ready!</p>
 
-    <ul>
+    <ol>
         {#each story as section, index (index)}
             <li>{section}</li>
         {/each}
-    </ul>
+    </ol>
 
     <label for="response">Your response:</label>
     <textarea cols="33" id="response" name="response" rows="5"></textarea>
     <button id="continue">Continue</button>
 </div>
+
+<style>
+    li {
+        display: inline-block;
+        margin: 5px;
+    }
+</style>
