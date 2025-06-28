@@ -19,10 +19,6 @@ body {
     text-align: center;
 }
 
-.main {
-    max-width: max(75vw, 600px);
-}
-
 a {
     color: var(--accent-color);
     text-decoration: none;
