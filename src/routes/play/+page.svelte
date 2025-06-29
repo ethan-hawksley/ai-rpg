@@ -1,18 +1,20 @@
 <script lang="ts">
     import {onMount} from "svelte";
-    import {prompt, scenarios, storytellers} from "./data";
+    import {prompt, scenarios, backstories, storytellers} from "./data";
 
-    type ScenarioKey = keyof typeof scenarios
-    type StorytellerKey = keyof typeof storytellers
+    type ScenarioKey = keyof typeof scenarios;
+    type BackstoryKey = keyof typeof backstories;
+    type StorytellerKey = keyof typeof storytellers;
 
     export let data: {
         settings: {
             scenario: ScenarioKey;
+            backstory: BackstoryKey;
             storyteller: StorytellerKey;
         };
     };
 
-    const masterPrompt = prompt + storytellers[data.settings.storyteller]
+    const masterPrompt = prompt + storytellers[data.settings.storyteller] + backstories[data.settings.backstory];
     export let story = [scenarios[data.settings.scenario]];
 
     onMount(() => {
