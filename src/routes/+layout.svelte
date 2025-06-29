@@ -9,7 +9,6 @@
 <nav>
     <a href="{base}/">Home</a>
     <a href="{base}/about">About</a>
-    <a href="{base}/start">Start</a>
     <a href="https://github.com/ethan-hawksley/ai-rpg">GitHub Repo</a>
 </nav>
 

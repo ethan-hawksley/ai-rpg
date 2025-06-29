@@ -64,7 +64,6 @@
 </script>
 <div class="container">
     <h2>AI-RPG</h2>
-    <p>Game ready!</p>
 
     <ol>
         {#each story as section, index (index)}
