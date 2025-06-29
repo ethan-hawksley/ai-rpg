@@ -24,12 +24,13 @@
         const form = event.currentTarget as HTMLFormElement;
         const formData = new FormData(form);
 
-        if (formData.has("scenario") && formData.has("storyteller")) {
+        if (formData.has("scenario") && formData.has("backstory") && formData.has("storyteller")) {
             const scenario = formData.get("scenario");
+            const backstory = formData.get("backstory");
             const storyteller = formData.get("storyteller");
             console.log(scenario, storyteller);
 
-            const settings = JSON.stringify({scenario, storyteller});
+            const settings = JSON.stringify({scenario, backstory, storyteller});
             goto(`${base}/play?settings=${encodeURIComponent(settings)}`);
         }
     }
